@@ -5,7 +5,7 @@ while (True):
   else:
     continue
 
-persons=int(input("Enter the no of persons\n"))
-bill_tip=round(bill*1.12,2)
-share=round(bill_tip/persons,2)
-print(f"The share of each person is {share}")
+persons=int(input("Enter the no of persons sharing the bill\n"))
+bill_tip=bill*1.12
+bill_share=round(bill_tip/persons,2)
+print(f"The share of each person is {bill_share}")
