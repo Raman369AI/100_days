@@ -33,9 +33,12 @@ print(password)
 n_password=''
 characters=[letters,numbers,symbols]
 list=[0]*nr_letters+[2]*nr_symbols+[1]*nr_numbers
+print(list)
+l_list=random.sample(list,len(list))
+print(l_list)
 r_list=sorted(list, key=lambda x:random.random())
 print(r_list)
-for i in r_list:
+for i in l_list:
   if i==0:
     r_letter=random.randint(0,len(letters)-1)
     n_password=n_password+characters[i][r_letter]
