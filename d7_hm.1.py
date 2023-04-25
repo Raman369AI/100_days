@@ -17,7 +17,7 @@ display = []
 for _ in range(word_length):
     display += "_"
 
-while not end_of_game:
+while display.count('_')!=0:
     guess = input("Guess a letter: ").lower()
 
     if guess in display:
@@ -30,18 +30,20 @@ while not end_of_game:
 
     #Check if user is wrong.
     if guess not in chosen_word:
-        print("you lose a life as the letter is wrong")
+        print(f"one more oppurtunity lost, lives remaining {lives-1}")
         lives -= 1
         if lives == 0:
-            end_of_game = True
             print("You lose.")
+            print(hangman_art.stages[lives])
+            break
 
     #Join all the elements in the list and turn it into a String.
     print(f"{' '.join(display)}")
 
     #Check if user has got all letters.
     if "_" not in display:
-        end_of_game = True
         print("You win.")
+        break
 
     print(hangman_art.stages[lives])
+   
