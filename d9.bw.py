@@ -1,17 +1,18 @@
+import os
+import operator
+
 def bid():
     person={}
-    person["name"]=input('Enter your name\n')
-    person["amount"]=input('Enter your amount\n')
-    print(person)
+    name=input('Enter your name\n')
+    person[name]=input('Enter your amount\n')
     direction=input('Do you want to continue? yes, no\n').lower()
     if direction=='yes':
-      clear()
+      os.system('clear')
       bid()
     else:
-      clear()
-      pass
+      os.system('clear')
+      sorted(person.items(),key=operator.itemgetter(1))
+      print(f"{person.popitem()} is the winner")
 
 
 bid()
-for name in bid.person:
-    n_name=name
