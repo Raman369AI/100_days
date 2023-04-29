@@ -9,7 +9,7 @@ def similar(A,B):
 
         print(f"against B {B['name']} a {B['description']} 'in' {B['country']}")
         
-        choice=input("Enter your choice")
+        choice=input("Enter your choice").upper()
         if choice=='A' and A['follower_count']>B['follower_count']:
             score+=1
             print ("You win")
@@ -35,7 +35,6 @@ def similar(A,B):
         else:
             pass
   
-print(art.logo)
 A=random.choice(game_data.data)
 B=random.choice(game_data.data)
 if A==B:
