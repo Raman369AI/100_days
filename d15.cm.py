@@ -85,10 +85,10 @@ def coins(arg):
 
 
 while True:
-    prompt = input("Enter your coffee")
+    prompt = input("Enter your coffee 1.espresso 2. latte 3. cappuccino ").lower()
     if prompt == "report":
         report()
-        prompt = input("Enter your coffee")
+        prompt = input("Enter your coffee").lower()
     elif prompt == "off":
         break
     resource = check(prompt)
@@ -104,4 +104,3 @@ while True:
 
     elif resource == 0 and coin < 0:
         print(f"Not enough money, collect {coin_n}\n")
-
