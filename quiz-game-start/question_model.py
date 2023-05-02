@@ -1,15 +1,9 @@
-import data
-import random
-
-
 class Question:
-    def __init__(self,qtext,qanswer):
-        self.text = qtext
-        self.answer = qanswer
+    def __init__(self, text, answer):
+        self.text = text
+        self.answer = answer
 
-m=Question('Raman',"True")
+
+m = Question('Raman', "True")
 print(m.text)
 print(m.answer)
-
-
-

@@ -17,9 +17,8 @@ class Quiz:
         self.check_answer(user_answer, current_question.answer)
 
     def check_answer(self, user_answer, correct_answer):
-        if user_answer == correct_answer:
+        if user_answer.lower() == correct_answer.lower():
             self.score += 1
-            print(f"Correct answer, score is {self.score}")
+            print(f"Correct answer, score is {self.score}/{self.question_number}")
         else:
-            print(f"Wrong answer score is {self.score}")
-
+            print(f"Wrong answer score is {self.score}/{self.question_number}\n")
